@@ -44,7 +44,7 @@ export const weddingData = {
   details: {
     bismillahArabic: "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
     bismillahEnglish: "In the name of Allah,\nthe Most Gracious, the Most Merciful",
-    invitationNote: "Together with our families, we joyfully invite you to celebrate our Nikkah and Walima and bless the beautiful beginning of our journey together.",
+    invitationNote: "Together with our families, we joyfully invite you to celebrate our Nikkah & Walima and bless the beautiful beginning of our journey together.",
     roseWatermark: "/assets/ros-ph1UdIgP.png",
     bowOrnament: "/assets/pinkbow-4m7XbsBA.png"
   },
