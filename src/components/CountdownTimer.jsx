@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Calendar, Clock } from 'lucide-react';
 import { weddingData } from '../data/weddingData';
 
 export default function CountdownTimer({ show }) {
@@ -55,13 +56,57 @@ export default function CountdownTimer({ show }) {
       {scratchSection.eventsSummary && (
         <div className="scratch-events-summary">
           {scratchSection.eventsSummary.map((evt, idx) => (
-            <div key={idx} className="scratch-event-card">
-              <span className="event-badge-label">{evt.heading || evt.title}</span>
-              {(evt.name || evt.eventName) && (
-                <span className="event-badge-name">{evt.name || evt.eventName}</span>
-              )}
-              <span className="event-badge-date">{evt.date}</span>
-              <span className="event-badge-time">{evt.time}</span>
+            <div
+              key={evt.id || idx}
+              className={`scratch-event-card ${evt.isBlush ? 'scratch-event-card-blush' : ''}`}
+            >
+              <div className="card-frame">
+                {/* Delicate ornamental gold corner decorations */}
+                <span className="card-corner corner-tl" aria-hidden="true" />
+                <span className="card-corner corner-tr" aria-hidden="true" />
+                <span className="card-corner corner-bl" aria-hidden="true" />
+                <span className="card-corner corner-br" aria-hidden="true" />
+
+                {/* Event Heading & Decorative line */}
+                <div className="card-top-header">
+                  <span className="event-badge-label">{evt.heading || evt.title}</span>
+                  <div className="card-ornament-line" aria-hidden="true">
+                    <span className="ornament-line-half" />
+                    <span className="ornament-sparkle">✦</span>
+                    <span className="ornament-line-half" />
+                  </div>
+                </div>
+
+                {/* Card Main: Left Illustration + Vertical Divider + Right Details */}
+                <div className="card-main-content">
+                  {evt.image && (
+                    <div className="card-illustration-wrap">
+                      <img
+                        src={evt.image}
+                        alt={evt.imageAlt || evt.name || evt.eventName}
+                        className="card-illustration-img"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+
+                  <div className="card-vertical-divider" aria-hidden="true" />
+
+                  <div className="card-info-wrap">
+                    {(evt.name || evt.eventName) && (
+                      <h4 className="event-badge-name">{evt.name || evt.eventName}</h4>
+                    )}
+                    <div className="event-meta-item">
+                      <Calendar size={13} className="meta-icon" aria-hidden="true" />
+                      <span className="event-badge-date">{evt.date}</span>
+                    </div>
+                    <div className="event-meta-item">
+                      <Clock size={13} className="meta-icon" aria-hidden="true" />
+                      <span className="event-badge-time">{evt.time}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>

@@ -44,7 +44,7 @@ export const weddingData = {
   details: {
     bismillahArabic: "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
     bismillahEnglish: "In the name of Allah,\nthe Most Gracious, the Most Merciful",
-    invitationNote: "Together with our families, we joyfully invite you to join us for the Walima celebration and bless the beautiful beginning of our journey together.",
+    invitationNote: "Together with our families, we joyfully invite you to celebrate our Nikkah and Walima and bless the beautiful beginning of our journey together.",
     roseWatermark: "/assets/ros-ph1UdIgP.png",
     bowOrnament: "/assets/pinkbow-4m7XbsBA.png"
   },
@@ -65,20 +65,40 @@ export const weddingData = {
     countdownDisplayDate: "18 . 12 . 2026",
     eventsSummary: [
       {
+        id: "nikkah",
         heading: "NIKKAH",
         title: "NIKKAH",
         name: "Nikkah Khwani",
         eventName: "Nikkah Khwani",
         date: "18 December 2026",
-        time: "After Jumma Namaz"
+        time: "After Jumma Namaz",
+        image: "/assets/nikkah-masjid.png",
+        imageAlt: "Nikkah Khwani",
+        isBlush: false
       },
       {
+        id: "dawat-e-nikah",
+        heading: "DAWAT-E-NIKAH",
+        title: "DAWAT-E-NIKAH",
+        name: "Dawat-e-Nikah",
+        eventName: "Dawat-e-Nikah",
+        date: "18 December 2026",
+        time: "After Magrib",
+        image: "/assets/dawat-e-nikah-cloche.png",
+        imageAlt: "Dawat-e-Nikah",
+        isBlush: true
+      },
+      {
+        id: "walima",
         heading: "WALIMA",
         title: "WALIMA",
         name: "Dawat-e-Walima",
         eventName: "Dawat-e-Walima",
         date: "19 December 2026",
-        time: "After Magrib"
+        time: "After Magrib",
+        image: "/assets/walima-dining.png",
+        imageAlt: "Dawat-e-Walima",
+        isBlush: false
       }
     ]
   },
