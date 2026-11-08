@@ -1,0 +1,222 @@
+/* ==========================================================================
+   DAWAT-E-NIKAH ISOLATED EVENT CARD COMPONENT
+   Migrated from source project (https://0ad5f744.pink-wedding-invitation.pages.dev/)
+   ========================================================================== */
+
+.dawat-e-nikah-card {
+  background: var(--color-ivory-card, #fffdfa);
+  border-radius: 20px;
+  padding: clamp(24px, 6vw, 32px) clamp(18px, 5vw, 26px);
+  width: 100%;
+  border: 1px solid rgba(197, 164, 109, 0.28);
+  box-shadow: var(--shadow-luxury-md, 0 10px 30px -5px rgba(101, 60, 75, 0.08), 0 4px 12px rgba(197, 164, 109, 0.06));
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.dawat-e-nikah-card::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 15px;
+  border: 1px solid rgba(221, 160, 174, 0.2);
+  pointer-events: none;
+}
+
+.dawat-e-nikah-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-luxury-lg, 0 18px 45px -8px rgba(101, 60, 75, 0.12), 0 6px 18px rgba(197, 164, 109, 0.08));
+}
+
+/* Category Badge (Pink gradient, white text, white star icon) */
+.dawat-e-nikah-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-family: var(--font-sans, 'Montserrat', sans-serif);
+  font-size: clamp(0.76rem, 2.2vw, 0.86rem);
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(135deg, #dfa3b0 0%, #c77f91 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(168, 75, 101, 0.25);
+}
+
+.dawat-e-nikah-badge-star {
+  color: #ffffff;
+  fill: #ffffff;
+  flex-shrink: 0;
+}
+
+/* Mosque Illustration Container */
+.dawat-e-nikah-illustration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6px auto 14px auto;
+  position: relative;
+  z-index: 2;
+}
+
+.dawat-e-nikah-masjid-image {
+  width: 82%;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 16px rgba(197, 164, 109, 0.25));
+  transition: transform 0.35s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.dawat-e-nikah-card:hover .dawat-e-nikah-masjid-image {
+  transform: scale(1.04);
+}
+
+/* Event Date */
+.dawat-e-nikah-date {
+  font-family: var(--font-serif-display, 'Cormorant Garamond', 'Playfair Display', serif);
+  font-size: clamp(1.45rem, 4.4vw, 1.85rem);
+  font-weight: 700;
+  color: var(--color-text-primary, #392b30);
+  margin: 6px 0 3px 0;
+  line-height: 1.25;
+  position: relative;
+  z-index: 2;
+}
+
+/* Event Timing */
+.dawat-e-nikah-time {
+  font-family: var(--font-sans, 'Montserrat', sans-serif);
+  font-size: clamp(0.92rem, 2.8vw, 1.05rem);
+  font-weight: 700;
+  color: var(--color-rose-deep, #a84b65);
+  margin-bottom: 12px;
+  white-space: pre-line;
+  line-height: 1.45;
+  position: relative;
+  z-index: 2;
+}
+
+/* Decorative Hairline Divider */
+.dawat-e-nikah-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px auto;
+  width: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.dawat-e-nikah-separator-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(197, 164, 109, 0.45);
+}
+
+.dawat-e-nikah-separator-dot {
+  font-size: 0.65rem;
+  color: var(--color-champagne-gold, #c5a46d);
+}
+
+/* Mosque Name (English) */
+.dawat-e-nikah-venue-name {
+  font-family: var(--font-serif-display, 'Cormorant Garamond', 'Playfair Display', serif);
+  font-size: clamp(1.2rem, 3.8vw, 1.45rem);
+  font-weight: 700;
+  color: var(--color-text-primary, #392b30);
+  margin: 8px 0 3px 0;
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+}
+
+.dawat-e-nikah-venue-subtitle {
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--color-text-secondary, #5a4a50);
+}
+
+/* Mosque Name (Hindi) */
+.dawat-e-nikah-venue-hindi {
+  font-family: var(--font-sans, 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  font-size: clamp(0.92rem, 2.7vw, 1.02rem);
+  font-weight: 600;
+  color: var(--color-rose-deep, #a84b65);
+  margin-bottom: 8px;
+  line-height: 1.35;
+  position: relative;
+  z-index: 2;
+}
+
+/* Venue Address */
+.dawat-e-nikah-venue-address {
+  font-family: var(--font-sans, 'Montserrat', sans-serif);
+  font-size: clamp(0.82rem, 2.4vw, 0.9rem);
+  color: var(--color-text-secondary, #5a4a50);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  white-space: pre-line;
+  position: relative;
+  z-index: 2;
+}
+
+/* Google Maps Button Wrapper & Button */
+.dawat-e-nikah-btn-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.dawat-e-nikah-map-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  min-height: 48px;
+  border-radius: 999px;
+  font-family: var(--font-sans, 'Montserrat', sans-serif);
+  font-size: clamp(0.72rem, 3.6vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+  max-width: 320px;
+  background: linear-gradient(135deg, #dfa3b0 0%, #c77f91 100%);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 16px rgba(168, 75, 101, 0.28);
+  box-sizing: border-box;
+}
+
+.dawat-e-nikah-map-btn:hover {
+  background: linear-gradient(135deg, #c77f91 0%, #a84b65 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(168, 75, 101, 0.4);
+}
+
+.dawat-e-nikah-btn-icon {
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+@media (max-width: 375px) {
+  .dawat-e-nikah-card {
+    padding: 24px 16px;
+  }
+}
+
