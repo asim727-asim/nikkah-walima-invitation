@@ -77,7 +77,7 @@ export default function CountdownTimer({ show }) {
                   </div>
                 </div>
 
-                {/* Card Main: Left Illustration + Vertical Divider + Right Details */}
+                {/* Card Main: Left Illustration + Right Details */}
                 <div className="card-main-content">
                   {evt.image && (
                     <div className="card-illustration-wrap">
@@ -90,18 +90,16 @@ export default function CountdownTimer({ show }) {
                     </div>
                   )}
 
-                  <div className="card-vertical-divider" aria-hidden="true" />
-
                   <div className="card-info-wrap">
                     {(evt.name || evt.eventName) && (
                       <h4 className="event-badge-name">{evt.name || evt.eventName}</h4>
                     )}
                     <div className="event-meta-item">
-                      <Calendar size={13} className="meta-icon" aria-hidden="true" />
+                      <Calendar size={16} className="meta-icon" aria-hidden="true" />
                       <span className="event-badge-date">{evt.date}</span>
                     </div>
                     <div className="event-meta-item">
-                      <Clock size={13} className="meta-icon" aria-hidden="true" />
+                      <Clock size={16} className="meta-icon" aria-hidden="true" />
                       <span className="event-badge-time">{evt.time}</span>
                     </div>
                   </div>
